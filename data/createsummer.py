@@ -37,7 +37,7 @@ def printrow(a, header=False):
 def printtable():
     print("<table>")
 
-    printrow(["Name", "Kattis", "Codeforces", "Misc" "Total"], True)
+    printrow(["Name", "Kattis", "Codeforces", "Misc", "Total"], True)
 
     data = []
     with open(datafilename) as dfile:
