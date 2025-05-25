@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- <meta name="description" content="Resources for the University of Michigan Programming Team." /> -->
+  <meta name="author" content="Ian DeHaan" />
+  <title>UM Programming Team</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+
+  <style>
+    .border-primary {
+      border-color: #00274C !important; 
+      
+    }
+    .border-secondary {
+      border-color: #FFCB05 !important;
+    }
+    a:visited {
+                text-decoration: none;
+                color: blue;
+            }
+
+            a:link {
+                text-decoration: none;
+                color: blue;
+            }
+
+            a:hover {
+                text-decoration: none;
+                background-color: pink;
+            }
+
+            table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+            }
+
+  details > summary {
+  padding: 0px;
+  width: 500px;
+  background-color: #eeeeee;
+  border: none;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: #eeeeee;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body>
+
+    <a href="https://open.kattis.com/contests/jzxfek">Link to set.</a> <br>
+    Solution Hints. If anything is unclear or you want more details, please ask about it in discord. <br>
+
+    <details>
+        <summary>A Terrible Fortress</summary>
+        <p>Just do it. Not much to say here.
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Quickscope</summary>
+        <p>
+            This is primarily an implementation exercise. Try maintaining a stack of types for each variable, along with a stack of sets containing the "declared" variables for each scope. When a scope goes out of context, pop a type from each variable declared in that scope.
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Number Squistem</summary>
+        <p>
+            Use `eval` from python.
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Andrew the Ant Hint 1</summary>
+        <p>
+            First solve <a href="https://open.kattis.com/problems/ants">ants</a>.
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Andrew the Ant Hint 2</summary>
+        <p>
+            An equivalent formulation is that, when two ants collide, they swap nametags and then keep moving in their original direction. 
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Andrew the Ant Hint 3</summary>
+        <p>
+            The longest time it takes for an ant to walk off the left end is max(x), where x ranges over the starting position of all ants initially facing left. The time for the right side is max(l-x), where x ranges over those ants initially facing right. 
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>Andrew the Ant</summary>
+        <p>
+            Let's solve it for those going left. Let x be the maximum starting position of any ant facing left. Let y be the number of ants to the left of x that are initially facing right. Then the ant that takes x time to walk off the left side will be the ant which starts y positions to the left of x.
+        </p>
+    </details>
+    <br>
+
+    <details>
+        <summary>DA-Sort</summary>
+        <p>
+            Any item x that has an item y occurring after it with y < x *must* be deleted.
+            Additionally, if x must be deleted, then all elements larger than x must be deleted (as, when x is moved to the end, those become invalid).
+            So, find the smallest x that has a y after it with y < x. Then x and everything larger than x must be deleted. Everything else is safe. There is some edge case here about things equal to x, but I leave that as an exercise to the reader.
+        </p>
+    </details>
+    <br>
+
+
+</body>
+</html>
+

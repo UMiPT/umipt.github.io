@@ -37,7 +37,7 @@ def printrow(a, header=False):
 def printtable():
     print("<table>")
 
-    printrow(["Name", "Kattis", "Codeforces", "Misc", "Total"], True)
+    printrow(["Name", "Kattis", "Codeforces", "Weekly", "Misc", "Total"], True)
 
     data = []
     with open(datafilename) as dfile:
@@ -46,7 +46,8 @@ def printtable():
             kscore = round(max(0, getkattisscore(a[1]) - float(a[3])), 2)
             cscore = int(a[4])
             mscore = int(a[5])
-            data.append((a[0], kscore, cscore, mscore, kscore+cscore+mscore,))
+            weeklyscore = int(a[6])
+            data.append((a[0], kscore, cscore, weeklyscore, mscore, kscore+cscore+mscore+weeklyscore))
     data.sort(key=lambda x: -1*x[4])
     for a in data:
         printrow(a)
