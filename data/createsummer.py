@@ -48,7 +48,7 @@ def printtable():
             mscore = int(a[5])
             weeklyscore = int(a[6])
             data.append((a[0], kscore, cscore, weeklyscore, mscore, kscore+cscore+mscore+weeklyscore))
-    data.sort(key=lambda x: -1*x[4])
+    data.sort(key=lambda x: -1*x[5])
     for a in data:
         printrow(a)
 
